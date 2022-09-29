@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW260922</title>
+    <style>
+      head,
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .wrapper {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100px 210px 100px;
+        grid-template-rows: 215px;
+        gap: 10px;
+      }
+
+      .aside {
+        background-color: rgb(66, 192, 35);
+      }
+
+      .main {
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-template-rows: repeat(3, 65px);
+        grid-template-areas:
+          "main__header main__header"
+          "content1 content2"
+          "content3 content4";
+        gap: 10px;
+      }
+
+      .main__header {
+        background-color: rgb(66, 192, 35);
+        grid-area: main__header;
+      }
+      .main__content1 {
+        grid-area: content1;
+        background-color: rgb(247, 208, 34);
+      }
+      .main__content2 {
+        grid-area: content2;
+        background-color: rgb(211, 42, 42);
+      }
+      .main__content3 {
+        grid-area: content3;
+        background-color: rgb(211, 42, 42);
+      }
+      .main__content4 {
+        grid-area: content4;
+        background-color: rgb(247, 208, 34);
+      }
+
+      .panel {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas:
+          "info__header"
+          "info__content"
+          "info__content";
+      }
+      .panel__header {
+        background-color: rgb(189, 62, 62);
+        grid-area: info__header;
+      }
+      .panel__content {
+        grid-area: info__content;
+        background-color: rgb(66, 192, 35);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="aside"></aside>
+
+      <div class="main">
+        <div class="main__header"></div>
+        <div class="main__content1"></div>
+        <div class="main__content2"></div>
+        <div class="main__content3"></div>
+        <div class="main__content4"></div>
+      </div>
+
+      <section class="panel">
+        <div class="panel__header"></div>
+        <div class="panel__content"></div>
+      </section>
+    </div>
+  </body>
+</html>
